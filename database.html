@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Chaos Galaxy - Database</title>
+</head>
+<style>
+    .search-image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 80%;
+        height: fit-content;
+        gap: 3px;
+        justify-items: center;
+        padding: 8px 1%;
+        direction: ltr;
+        position: relative;
+    }
+
+    .img-container {
+        position: relative;
+        align-self: center;
+        text-align: center;
+    }
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+    .search-results-container {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+</style>
+<body>
+    <div class="page-container">
+        <div class="search-options">
+            <select id="sort-order">
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
+            <input id="search">
+        </div>
+        <div class="search-results-container">
+            <div id="card-grid" class="search-image-grid"></div>
+        </div>
+    </div>
+    <script src="scripts/database.js"></script>
+</body>
+</html>
