@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Chaos Galaxy - Database</title>
+    <link rel="icon" href="img/icon.png">
 </head>
 <style>
     .search-image-grid {
@@ -62,7 +63,16 @@
 <body>
     <div class="page-container">
         <div class="search-options">
-            <select id="sort-order" onchange="preSearch()">
+            <select id="sort-order" onchange="preSearch(true)">
+                <option value="name"  >Name   </option>
+                <option value="type"  >Type   </option>
+                <option value="planet">Planet </option>
+                <option value="stars" >Stars  </option>
+                <option value="set"   >Set    </option>
+                <option value="rarity">Rarity </option>
+                <option value="cardid">Card Id</option>
+            </select>
+            <select id="sort-direction" onchange="preSearch(true)">
                 <option value="ascending">Ascending</option>
                 <option value="descending">Descending</option>
             </select>

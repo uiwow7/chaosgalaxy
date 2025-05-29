@@ -1,4 +1,5 @@
 let card_list;
+let card_list_file;
 let search_results = [];
 const pageCount = 24;
 const urlParams = new URLSearchParams(window.location.search);
@@ -9,17 +10,22 @@ window.addEventListener("DOMContentLoaded", async function() {
     await fetch('resources/database.json')
         .then(response => response.json())
         .then(json => {
-            card_list = json;
+            card_list_file = json;
     }).catch(error => console.error('Error:', error));
+
+    card_list = [...card_list_file];
 
     document.getElementById("search").value = urlParams.get("search");
 
 	preSearch();
 });
 
-function preSearch() {
+function preSearch(reset = false) {
+    if (reset) {
+        card_list = [...card_list_file];
+    }
     card_list.sort(sortFunction);
-    if (document.getElementById("sort-order").value == "descending")
+    if (document.getElementById("sort-direction").value == "descending")
     {
         card_list.reverse();
     }
@@ -288,12 +294,71 @@ function gridifyCard(card) {
 }
 
 function sortFunction(a ,b) {
-    if (a.card_title === b.card_title)
-    {
-        return 0;
+    const sort_order = document.getElementById("sort-order").value;
+    if (sort_order == "name") {
+        if (a.card_title === b.card_title)
+        {
+            return 0;
+        }
+        else {
+            return (a.card_title < b.card_title) ? -1 : 1;
+        }
     }
-    else {
-        return (a.card_title < b.card_title) ? -1 : 1;
+    if (sort_order == "type") {
+        if (a.card_type === b.card_type)
+        {
+            return 0;
+        }
+        else {
+            return (a.card_type < b.card_type) ? -1 : 1;
+        }
+    }
+    if (sort_order == "planet") {
+        if (a.Planet === b.Planet)
+        {
+            return 0;
+        }
+        else {
+            return (a.Planet < b.Planet) ? -1 : 1;
+        }
+    }
+    if (sort_order == "stars") {
+        if (a.Stars === b.Stars)
+        {
+            return 0;
+        }
+        else {
+            return (a.Stars < b.Stars) ? -1 : 1;
+        }
+    }
+    if (sort_order == "set") {
+        if (a.Sets === b.Sets)
+        {
+            return 0;
+        }
+        else {
+            return (a.Sets < b.Sets) ? -1 : 1;
+        }
+    }
+    if (sort_order == "rarity") {
+        const a_rarity = Object.keys(a.Rarities)[0];
+        const b_rarity = Object.keys(b.Rarities)[0];
+        if (a_rarity === b_rarity)
+        {
+            return 0;
+        }
+        else {
+            return (a_rarity < b_rarity) ? -1 : 1;
+        }
+    }
+    if (sort_order == "cardid") {
+        if (a.ID === b.ID)
+        {
+            return 0;
+        }
+        else {
+            return (a.ID < b.ID) ? -1 : 1;
+        }
     }
 }
 
