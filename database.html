@@ -31,6 +31,33 @@
         align-items: center;
         justify-items: center;
     }
+    button {
+		background-color: #fafafa;
+		border: 1px solid #d5d9d9;
+		border-radius: 8px;
+		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		color: #171717;
+		cursor: pointer;
+		font-size: 13px;
+		/* width: 100%; */
+		height: 35px;
+		min-width: 85px;
+	}
+	button:hover {
+		background-color: #ffffff;
+	}
+	button:focus {
+		border-color: #171717;
+		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		outline: 0;
+	}
+	button:disabled {
+		cursor: auto;
+		background-color: #f7fafa;
+		font-style: italic;
+		box-shadow: none;
+		color: #cccccc;
+	}
 </style>
 <body>
     <div class="page-container">
@@ -41,8 +68,12 @@
             </select>
             <input id="search">
         </div>
-        <div class="page-btns">
-            
+        <div class="pages-container">
+            <div class="page-btns">
+                <button type="submit" onclick="previousPage()" id="prevBtn" disabled>< Previous</button>
+                <button type="submit" onclick="nextPage()" id="nextBtn">Next ></button>
+            </div>
+            <span id="page-count">Page 1 of 1</span>
         </div>
         <div class="search-results-container">
             <div id="card-grid" class="search-image-grid"></div>

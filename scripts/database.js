@@ -76,8 +76,22 @@ function search() {
     let cardGrid = document.getElementById("card-grid");
     cardGrid.innerHTML = "";
 
+    document.getElementById("nextBtn").innerText = "Next " + pageCount + " >";
+	document.getElementById("prevBtn").innerText = "< " + "Previous " + pageCount;
+
+    if (page != 0)
+    {
+        document.getElementById("prevBtn").disabled = false;
+        // document.getElementById("prevBtn-footer").disabled = false;
+    }
+    else
+    {
+        document.getElementById("prevBtn").disabled = true;
+        // document.getElementById("prevBtn-footer").disabled = true;
+    }
+
     for (const card of card_list) {
-        searched = searchAllTokens(card, searchTerms(terms));
+        let searched = searchAllTokens(card, searchTerms(terms));
 
         if (searched)
         {
@@ -89,6 +103,28 @@ function search() {
     {
         cardGrid.appendChild(gridifyCard(search_results[i]));
     }
+
+    if (search_results.length <= (pageCount * (page + 1)))
+    {
+        document.getElementById("nextBtn").disabled = true;
+        // document.getElementById("nextBtn-footer").disabled = true;
+    }
+    else
+    {
+        document.getElementById("nextBtn").disabled = false;
+        // document.getElementById("nextBtn-footer").disabled = false;
+    }
+
+    if (search_results.length < 10) {
+        // document.getElementById("nextBtn-footer").style.display = "none";
+        // document.getElementById("prevBtn-footer").style.display = "none";
+    }
+    if (search_results.length > 10) {
+        // document.getElementById("nextBtn-footer").style.display = "";
+        // document.getElementById("prevBtn-footer").style.display = "";
+    }
+
+    document.getElementById("page-count").innerText = "Page " + (page + 1) + " of " + Math.ceil(search_results.length / pageCount);
 
     // for (let i = 0; i < search_results.length; i++)
     // {
@@ -232,6 +268,7 @@ document.getElementById("search").addEventListener("keypress", (e) => {
         if (event.key === "Enter") {
             event.preventDefault();
             // window.location.search = "?search=" + document.getElementById("search").value + "&page=" + (page + 1);
+            page = 0;
             preSearch();
         }
     });
@@ -258,4 +295,14 @@ function sortFunction(a ,b) {
     else {
         return (a.card_title < b.card_title) ? -1 : 1;
     }
+}
+
+function nextPage() {
+    page += 1;
+    preSearch();
+}
+
+function previousPage() {
+    page -= 1;
+    preSearch();
 }
