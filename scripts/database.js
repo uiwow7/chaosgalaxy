@@ -21,7 +21,7 @@ function preSearch() {
     card_list.sort(sortFunction);
     if (document.getElementById("sort-order").value == "descending")
     {
-        card_list_arrayified.reverse();
+        card_list.reverse();
     }
     search_results = [];
 
@@ -85,10 +85,8 @@ function search() {
         }
     }
 
-    console.log(pageCount * page, Math.min((pageCount * (page + 1))), search_results.length, search_results)
     for (let i = (pageCount * page); i < Math.min((pageCount * (page + 1)), search_results.length); i++)
     {
-        console.log("looping");
         cardGrid.appendChild(gridifyCard(search_results[i]));
     }
 
@@ -128,9 +126,11 @@ function searchToken(card, token) {
         }
     }
 
-    const card_name = card_stats["Card Title"].toLowerCase();
+    const card_title = card_stats.card_title.toLowerCase();
+    const card_type = card_stats.card_type.toLowerCase();
+    const card_banned = card_stats.banlist.toLowerCase();
 
-    token = token.replaceAll("~", card_name).replaceAll("cardname", card_name).replaceAll('"','').replaceAll('“','').replaceAll('”','');
+    token = token.replaceAll("~", card_title).replaceAll("cardname", card_title).replaceAll('"','').replaceAll('“','').replaceAll('”','');
 
     const modifierRegex = /[!:<>=]+/g;
     const match = token.match(modifierRegex);
@@ -150,10 +150,6 @@ function searchToken(card, token) {
             check = check.substring(0,check.length - 1);
         }
 
-        if (color_map.has(check))
-        {
-            check = color_map.get(check);
-        }
 
         // availableTokens = ["mv", "c", "ci", "t", "o", "pow", "tou", "r", "is"]
 
@@ -177,16 +173,66 @@ function searchToken(card, token) {
 
             }
         } */
+
+        if (term == "t" || term == "type" || term == "cardtype")
+        {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_type == check;
+            }
+            else if (modifier == ":")
+            {
+                return card_type.includes(check);
+            }
+            else if (modifier == "<")
+            {
+                return card_type < check;
+            }
+            else if (modifier == ">")
+            {
+                return card_type > check;
+            }
+        } else if (term == "b" || term == "ban" || term == "banlist") {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_banned == formatBanlist(check);
+            }
+            else if (modifier == ":")
+            {
+                return card_banned.includes(formatBanlist(check));
+            }
+            else if (modifier == "<")
+            {
+                return banlistCheck(card_banned, modifier, check);
+            }
+            else if (modifier == ">")
+            {
+                return banlistChecks(card_banned, modifier, check);
+            }
+        }
     }
     let regex = new RegExp(token.replaceAll("+","\\+"));
-    return (regex.test(card_stats.special_text) && (localStorage.getItem('settings.searchalias') == "On")) || card_name.includes(token);
+    return (regex.test(card_stats.special_text) && (localStorage.getItem('settings.searchalias') == "On")) || card_title.includes(token);
+}
+
+function formatBanlist(val) {
+    if (val == "banned" || val == "ban" || val == "forbidden") {
+        return "banned";
+    }
+    if (val == "limited" || val == "half" || val == "half-banned" || val == "halfbanned" || val) {
+        return "limited";
+    }
+    if (val == "banned" || val == "ban" || val == "forbidden") {
+        return "banned";
+    }
 }
 
 document.getElementById("search").addEventListener("keypress", (e) => {
     document.getElementById("search").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            window.location.href = "?search=" + document.getElementById("search").value + "&page=" + (page + 1);
+            // window.location.search = "?search=" + document.getElementById("search").value + "&page=" + (page + 1);
+            preSearch();
         }
     });
 })
@@ -205,5 +251,11 @@ function gridifyCard(card) {
 }
 
 function sortFunction(a ,b) {
-    return 0;
+    if (a.card_title === b.card_title)
+    {
+        return 0;
+    }
+    else {
+        return (a.card_title < b.card_title) ? -1 : 1;
+    }
 }
