@@ -171,6 +171,11 @@ function searchToken(card, token) {
     const card_title = card_stats.card_title.toLowerCase();
     const card_type = card_stats.card_type.toLowerCase();
     const card_banned = card_stats.banlist.toLowerCase();
+    const card_planet = card_stats.Planet.toLowerCase();
+    const card_text = card_stats["Card Ability"].toLowerCase();
+    const card_power = parseInt(card_stats.Power);
+    const card_health = parseInt(card_stats.Health);
+    const card_stars = parseInt(card_stats.Stars);
 
     token = token.replaceAll("~", card_title).replaceAll("cardname", card_title).replaceAll('"','').replaceAll('“','').replaceAll('”','');
 
@@ -196,7 +201,7 @@ function searchToken(card, token) {
         // availableTokens = ["mv", "c", "ci", "t", "o", "pow", "tou", "r", "is"]
 
         /* template
-        if (term == "mv")
+        else if (term == "mv")
         {
             if (modifier == "!" || modifier == "=")
             {
@@ -214,7 +219,8 @@ function searchToken(card, token) {
             {
 
             }
-        } */
+        } 
+        */
 
         if (term == "t" || term == "type" || term == "cardtype")
         {
@@ -234,7 +240,7 @@ function searchToken(card, token) {
             {
                 return card_type > check;
             }
-        } else if (term == "b" || term == "ban" || term == "banlist") {
+        } else if (term == "b" || term == "ban" || term == "banned" || term == 'banlist') {
             if (modifier == "!" || modifier == "=")
             {
                 return card_banned == formatBanlist(check);
@@ -250,6 +256,75 @@ function searchToken(card, token) {
             else if (modifier == ">")
             {
                 return banlistChecks(card_banned, modifier, check);
+            }
+        } else if (term == "a" || term == "text" || term == "ability") {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_text == check;
+            }
+            else if (modifier == ":")
+            {
+                return card_text.includes(card_text);
+            }
+        } else if (term == "p" || term == "planet")
+        {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_planet == check;
+            }
+            else if (modifier == ":")
+            {
+                return card_planet.includes(check);
+            }
+        } else if (term == "pow" || term == "power")
+        {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_power == check;
+            }
+            else if (modifier == ":")
+            {
+                return card_power >= check;
+            }
+            else if (modifier == "<")
+            {
+                return card_power < check;
+            }
+            else if (modifier == ">")
+            {
+                return card_power > check;
+            }
+        } else if (term == "h" || term == "hea" || term == "health")
+        {
+            if (modifier == "!" || modifier == "=")
+            {
+                return card_health == check;
+            }
+            else if (modifier == ":")
+            {
+                return card_health >= check;
+            }
+            else if (modifier == "<")
+            {
+                return card_health < check;
+            }
+            else if (modifier == ">")
+            {
+                return card_health > check;
+            }
+        } else if (term == "s" || term == "star" || term == "stars")
+        {
+            if (modifier == "!" || modifier == "=" || modifier == ":")
+            {
+                return card_stars == check;
+            }
+            else if (modifier == "<")
+            {
+                return card_stars < check;
+            }
+            else if (modifier == ">")
+            {
+                return card_stars > check;
             }
         }
     }
