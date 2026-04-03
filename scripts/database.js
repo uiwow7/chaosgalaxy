@@ -95,15 +95,9 @@ function search() {
         document.getElementById("prevBtn").disabled = true;
         // document.getElementById("prevBtn-footer").disabled = true;
     }
-
-    for (const card of card_list) {
-        let searched = searchAllTokens(card, searchTerms(terms));
-
-        if (searched)
-        {
-            search_results.push(card);
-        }
-    }
+    
+    const search_terms = searchTerms(terms);
+    const search_results = card_list.filter(card => searchAllTokens(card, search_terms));
 
     for (let i = (pageCount * page); i < Math.min((pageCount * (page + 1)), search_results.length); i++)
     {
@@ -221,7 +215,6 @@ function searchToken(card, token) {
             }
         } 
         */
-
         if (term == "t" || term == "type" || term == "cardtype")
         {
             if (modifier == "!" || modifier == "=")
@@ -264,7 +257,7 @@ function searchToken(card, token) {
             }
             else if (modifier == ":")
             {
-                return card_text.includes(card_text);
+                return card_text.includes(check);
             }
         } else if (term == "p" || term == "planet")
         {
