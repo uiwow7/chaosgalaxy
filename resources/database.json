@@ -12501,7 +12501,7 @@
     "Health": ""
   },
   {
-    "card_title": "/img/cards/burrowed_matriarch.png",
+    "card_title": "img/cards/burrowed_matriarch.png",
     "ID": "ff47f962-103d-4e77-ba1f-acacf458008b",
     "Images": "https://static.wixstatic.com/media/c3c13c_40cb393144d542f7933e44a8cb459054~mv2.jpg",
     "fancard": "FALSE",
@@ -12560,7 +12560,7 @@
   {
     "card_title": "Cyber Kubox",
     "ID": "cyber_kubox_fanset",
-    "Images": "/img/cards/cyber_kubox.png",
+    "Images": "img/cards/cyber_kubox.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12579,7 +12579,7 @@
   {
     "card_title": "Baby Kranchon",
     "ID": "baby_kranchon_fanset",
-    "Images": "/img/cards/baby_kranchon.png",
+    "Images": "img/cards/baby_kranchon.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12598,7 +12598,7 @@
   {
     "card_title": "Barosaurus",
     "ID": "barosaurus_fanset",
-    "Images": "/img/cards/barosaurus.png",
+    "Images": "img/cards/barosaurus.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12617,7 +12617,7 @@
   {
     "card_title": "Burrowed Drone - King of Burrabugs",
     "ID": "burrowed_drone_fanset",
-    "Images": "/img/cards/burrowed_drone-king_of_burrabugs.png",
+    "Images": "img/cards/burrowed_drone-king_of_burrabugs.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12636,7 +12636,7 @@
   {
     "card_title": "Burrowed Matriarch",
     "ID": "burrowed_martriarch_fanset",
-    "Images": "/img/cards/burrowed_matriarch.png",
+    "Images": "img/cards/burrowed_matriarch.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12655,7 +12655,7 @@
   {
     "card_title": "Cloudcatcher",
     "ID": "cloudcatcher",
-    "Images": "/img/cards/cloudcatcher.png",
+    "Images": "img/cards/cloudcatcher.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12674,7 +12674,7 @@
   {
     "card_title": "Coral Commander",
     "ID": "corral_commander",
-    "Images": "/img/cards/coral_commander.png",
+    "Images": "img/cards/coral_commander.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12693,7 +12693,7 @@
   {
     "card_title": "Cyber Belt",
     "ID": "cyber_belt",
-    "Images": "/img/cards/cyber_belt.png",
+    "Images": "img/cards/cyber_belt.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12712,7 +12712,7 @@
   {
     "card_title": "Cyber Bugonk",
     "ID": "cyber_bugonk",
-    "Images": "/img/cards/cyber_bugonk.png",
+    "Images": "img/cards/cyber_bugonk.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12731,7 +12731,7 @@
   {
     "card_title": "Cyber Factory",
     "ID": "cyber_factory",
-    "Images": "/img/cards/cyber_factory.png",
+    "Images": "img/cards/cyber_factory.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12750,7 +12750,7 @@
   {
     "card_title": "Ghatomic Scourge",
     "ID": "ghatomic_scourge",
-    "Images": "/img/cards/ghatomic_scourge.png",
+    "Images": "img/cards/ghatomic_scourge.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12769,7 +12769,7 @@
   {
     "card_title": "Cyber Mooosh",
     "ID": "cyber_mooosh",
-    "Images": "/img/cards/cyber_mooosh.png",
+    "Images": "img/cards/cyber_mooosh.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12788,7 +12788,7 @@
   {
     "card_title": "Dr Tekstein",
     "ID": "dr_tekstein",
-    "Images": "/img/cards/dr_tekstein.png",
+    "Images": "img/cards/dr_tekstein.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12807,7 +12807,7 @@
   {
     "card_title": "Dust Blower Spirit",
     "ID": "dust_blower_spirit",
-    "Images": "/img/cards/dust_blower_spirit.png",
+    "Images": "img/cards/dust_blower_spirit.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12826,7 +12826,7 @@
   {
     "card_title": "Eater of the Cosmos",
     "ID": "eater_of_the_cosmos",
-    "Images": "/img/cards/eater_of_the_cosmos.png",
+    "Images": "img/cards/eater_of_the_cosmos.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12845,7 +12845,7 @@
   {
     "card_title": "Elite Ung Ung",
     "ID": "elite_ung_ung",
-    "Images": "/img/cards/elite_ung_ung.png",
+    "Images": "img/cards/elite_ung_ung.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12864,7 +12864,7 @@
   {
     "card_title": "Flamebeak",
     "ID": "flamebeak",
-    "Images": "/img/cards/flamebeak.png",
+    "Images": "img/cards/flamebeak.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12883,7 +12883,7 @@
   {
     "card_title": "Flaming Minos",
     "ID": "flaming_minos",
-    "Images": "/img/cards/flaming_minos.png",
+    "Images": "img/cards/flaming_minos.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12902,7 +12902,7 @@
   {
     "card_title": "Forgotten Lineage",
     "ID": "forgotten_lineage",
-    "Images": "/img/cards/forgotten_linage.png",
+    "Images": "img/cards/forgotten_linage.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12921,7 +12921,7 @@
   {
     "card_title": "Fried Fraxle Legs",
     "ID": "fried_fraxle_legs",
-    "Images": "/img/cards/fried_fraxle_legs.png",
+    "Images": "img/cards/fried_fraxle_legs.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
@@ -12940,7 +12940,7 @@
   {
     "card_title": "Little Star",
     "ID": "little_star",
-    "Images": "/img/cards/little_star.png",
+    "Images": "img/cards/little_star.png",
     "fancard": "TRUE",
     "Sets": [
       "Fan Set"
