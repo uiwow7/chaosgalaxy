@@ -12732,7 +12732,7 @@
     "card_title": "Cyber Factory",
     "ID": "cyber_factory",
     "Images": "img/cards/cyber_factory.png",
-    "fancard": "TRUE",
+    "fancard": "",
     "Sets": [
       "Fan Set"
     ],
@@ -12955,5 +12955,822 @@
     "banlist": "",
     "Power": "???",
     "Health": "???"
+  },
+  {
+    "card_title": "Ghatomic Swirldol",
+    "ID": "ghatomic_swirdol",
+    "Images": "img/cards/ghatomic_swirldol.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 4,
+    "card_type": "Creature",
+    "Planet": "Sindell",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this card is free played by the ability of 'Ghi', add 1 of your killed 'Ghatomic' creatures or 'Gho' to your hand, then draw 1 card.",
+    "banlist": "",
+    "Power": 230,
+    "Health": 160
+  },
+  {
+    "card_title": "Ghatomic Wave Transmitter",
+    "ID": "ghatomic_wave_transmitter",
+    "Images": "img/cards/ghatomic_wave_transimtter.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Kill 1 galaxied 'Ghatomic' creature or 'Ghi'. Until the end of your turn, all played 'Ghatomic' creatures are treated as if they were played by the ability of 'Ghi'.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Gigantic Snowball",
+    "ID": "gigantic_snowball",
+    "Images": "img/cards/gigantic_snowball.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Activator",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When a creature would attack... Move 1 creature from a battle zone back into a creature zone.",
+    "banlist": "",
+    "Power": 280,
+    "Health": 480
+  },
+  {
+    "card_title": "Hail Whale",
+    "ID": "hail_whale",
+    "Images": "img/cards/hail_whale.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 8,
+    "card_type": "Creature",
+    "Planet": "Palicium",
+    "Rarities": {
+      "Fan Set": "Really Rare"
+    },
+    "Card Ability": "When this zoned creature is free played, make all zoned creatures lose 100 health, then if any creature's health becomes 0 as a result, kill it.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Hinge Snake",
+    "ID": "hinge_snake",
+    "Images": "img/cards/hinge_snake.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Teklar",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this creature is cost played, you can look at the top 5 cards of your galaxy and put them back in any order.",
+    "banlist": "",
+    "Power": 160,
+    "Health": 80
+  },
+  {
+    "card_title": "Interplanetary Genius",
+    "ID": "interplanetary_genius",
+    "Images": "img/cards/interplanetary_genius.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "No Planet",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this creature is cost played, you can add 1 galaxied No-Planet creature, or card that mentons No-Planet to your hand. Once per turn, you can make 1 zoned creature No-Planet.",
+    "banlist": "",
+    "Power": 50,
+    "Health": 250
+  },
+  {
+    "card_title": "Krakin",
+    "ID": "krakin",
+    "Images": "img/cards/krakin.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Sheos",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Once per turn, when your opponent's turn ends, you can kill the top card of your galaxy, then if it's a creature, free play that creature.",
+    "banlist": "",
+    "Power": 30,
+    "Health": 160
+  },
+  {
+    "card_title": "Kryto, Beast of the Deep",
+    "ID": "kryto_botd",
+    "Images": "img/cards/kryto_beast_of_the_deep.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 7,
+    "card_type": "Creature",
+    "Planet": "Palicium",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When this card is played, each player reveals the top 4 cards of their galaxy, then they can free play 1 of their revealed creatures that comes from their planet card.",
+    "banlist": "",
+    "Power": 350,
+    "Health": 320
+  },
+  {
+    "card_title": "Last Breath",
+    "ID": "last_breath",
+    "Images": "img/cards/last_breath.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Activator",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When 1 of your zoned Rokah creatures is killed... Add 1 creature zone and 1 battle zone to your planet, then free play that creature into that creature zone, but at the end of your opponent's next turn, kill that creature and remove those zones.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Soraing Skies",
+    "ID": "soaring_skies",
+    "Images": "img/cards/soaring_skies.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Permanent Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Really Rare"
+    },
+    "Card Ability": "Neither player can free play creatures.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Oversized Stilts",
+    "ID": "oversized_stilts",
+    "Images": "img/cards/oversized_stilts.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Attachment",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Whilst the attached creature is the only creature on your planet, your opponent can attack your planet directly.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Pointy Bug",
+    "ID": "pointy_bug",
+    "Images": "img/cards/pointy_bug.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 5,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Each time a Gaios creature is played, or its ability is used, except the ability of 'Pointy Bug', gain 1 point.",
+    "banlist": "",
+    "Power": 150,
+    "Health": 240
+  },
+  {
+    "card_title": "Posessed Sarcophagus",
+    "ID": "pos_sarc0",
+    "Images": "img/cards/possessed_sarcophagus.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 5,
+    "card_type": "Creature",
+    "Planet": "Baro",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When this creature's power & health swap, free play 1 of your killed 4 star or lower Baro creatures.",
+    "banlist": "",
+    "Power": 120,
+    "Health": 280
+  },
+  {
+    "card_title": "Relohex Bazlisk",
+    "ID": "BAZLISK",
+    "Images": "img/cards/relohex_bazlisk.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Rokah",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this creature is played, you can place any number of your handed cards at the bottom of your galaxy, and if you do, draw that many cards at the end of this turn.",
+    "banlist": "",
+    "Power": 90,
+    "Health": 180
+  },
+  {
+    "card_title": "Scorched Starfish",
+    "ID": "when the fish is star",
+    "Images": "img/cards/scorched_starfish.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Sheos",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Up to thrice per turn, when this creature's power changes, gain 2 stars.",
+    "banlist": "",
+    "Power": 150,
+    "Health": 50
+  },
+  {
+    "card_title": "Shadow Runner",
+    "ID": "shadow_runner",
+    "Images": "img/cards/shadow_runner.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 6,
+    "card_type": "Creature",
+    "Planet": "SIndell",
+    "Rarities": {
+      "Fan Set": "Really Rare"
+    },
+    "Card Ability": "When your turn ends, play this card as a permanent resource into 1 of your empty resource zones. When your turn starts, if this card is a permanent resource, free play it, if you can't, kill it.",
+    "banlist": "",
+    "Power": 390,
+    "Health": 120
+  },
+  {
+    "card_title": "Skullerang",
+    "ID": "skullerang",
+    "Images": "img/cards/skullerang.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Attachment",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "The attached creature gains 90 power, when the attached creature is killed, you can pay 1 star to add this card to your hand.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Snatchojel",
+    "ID": "Snatchojel",
+    "Images": "img/cards/snatchojel.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Palicium",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this zoned card is killed, you can remove 1 empty zone from your opponent's planet.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Soaring Seerbird",
+    "ID": "soaring_seerbird",
+    "Images": "img/cards/soaring_seerbird.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 4,
+    "card_type": "Creature",
+    "Planet": "Rokah",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When your opponent reveals 1 handed card, you can add 1 galaxied 'Soaring' card, or non-creature card that mentions Rokah to your hand.",
+    "banlist": "",
+    "Power": 190,
+    "Health": 190
+  },
+  {
+    "card_title": "The Monster",
+    "ID": "the_monster",
+    "Images": "img/cards/the_monster.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 7,
+    "card_type": "Creature",
+    "Planet": "Teklar",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Your opponent cannot attack your other zoned Teklar creatures.",
+    "banlist": "",
+    "Power": 280,
+    "Health": 400
+  },
+  {
+    "card_title": "Soaring Songbird",
+    "ID": "soaring_songbird",
+    "Images": "img/cards/soaring_songbird.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Rokah",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Your handed Rokah creatures cost 2 less stars for each revealed card in your opponent's hand.",
+    "banlist": "",
+    "Power": 170,
+    "Health": 20
+  },
+  {
+    "card_title": "Soaring Starbird",
+    "ID": "soaring_starbird",
+    "Images": "img/cards/soaring_starbird.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 6,
+    "card_type": "Creature",
+    "Planet": "Rokah",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When cost playing this creature, you can also kill 1 of your zoned Rokah creatures and gain its stars. When played this way, kill 1 of your opponent's zoned creatures.",
+    "banlist": "",
+    "Power": 290,
+    "Health": 300
+  },
+  {
+    "card_title": "Sporaptor",
+    "ID": "sporaptor",
+    "Images": "img/cards/sporaptor.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 6,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "Once per turn, you can draw 1 card for every other zoned Gaios creature.",
+    "banlist": "",
+    "Power": 340,
+    "Health": 170
+  },
+  {
+    "card_title": "Starship Engineer",
+    "ID": "starship_engineer",
+    "Images": "img/cards/starship_engineer.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Sindian",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When you cost play this creature, you can add 1 galaxied/killed 'Starship XXS' to your hand.",
+    "banlist": "",
+    "Power": 140,
+    "Health": 50
+  },
+  {
+    "card_title": "Summon From Below",
+    "ID": "summon_from_bellow",
+    "Images": "img/cards/summon_from_below.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Shuffle 2-5 of your killed Sindell creatures into your galaxy to cost play 1 galaxied Sindell creature with a different name whose stars equal the shuffled creatures' total stars.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Summon Protector",
+    "ID": "summon_protector",
+    "Images": "img/cards/summon_protector.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Attachment",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Really Rare"
+    },
+    "Card Ability": "Attach only to a 1 star creature. The attached creature can't be killed. The turn player can kill 1 handed 1 star creature to kill this card.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Teklar Border Customs",
+    "ID": "CUSTOMS!!!!!!!1",
+    "Images": "img/cards/teklar_border_customs.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Activator",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When your opponent plays a resource card... Your opponent makes you apply 1 of these abilities: \n- Your opponent can only play creature(s) once this turn.\n- Your opponent can't free play creatures this turn.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "The Great Resurrection",
+    "ID": "the great res",
+    "Images": "img/cards/the_great_resurrection.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Permanent Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "When played, kill 1 galaxied creature, then free play 1 of your other killed creatures with the same name.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "The Madmany",
+    "ID": "madman y",
+    "Images": "img/cards/the_madmany.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 8,
+    "card_type": "Creature",
+    "Planet": "Rokah",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this creature is played, you can make it unaffected by card abilities and attacks until the end of your next turn.",
+    "banlist": "",
+    "Power": 300,
+    "Health": 300
+  },
+  {
+    "card_title": "Vyle, the Soul Harvest",
+    "ID": "harvest that soul",
+    "Images": "img/cards/vyle_the_soul_harvest.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 8,
+    "card_type": "Creature",
+    "Planet": "Sindell",
+    "Rarities": {
+      "Fan Set": "Rare"
+    },
+    "Card Ability": "Once per turn, when your opponent free plays a creature(s), you can either: - Free play 1 of your killed 4 star or lower Sindell creatures. - Kill that creature(s).",
+    "banlist": "",
+    "Power": 360,
+    "Health": 400
+  },
+  {
+    "card_title": "Thirstbug Drainage",
+    "ID": "D R A I N",
+    "Images": "img/cards/thirstbug_drainage.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Activator",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When an opponent's card/ability is played/used... Pay 4 points to cancel 1 zoned card's abilities until the end of this turn.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Thirstbug Molting",
+    "ID": "MOLT",
+    "Images": "img/cards/thirstbug_molting.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Permanent Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When 1 of your Gaios creatures is killed by an ability, you can either:\n- Gain 1 point.\n- Gain that creature's stars.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Thirstbug Pupa",
+    "ID": "when the pu is pa",
+    "Images": "img/cards/thirstbug_pupa.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Can't be killed by battle during your turn. After this card attacks, gain 2 points, also your opponent loses 1 point. When this card is killed, you can pay 1 point to add 1 different, killed 'Thirstbug' card to your hand.",
+    "banlist": "",
+    "Power": 10,
+    "Health": 10
+  },
+  {
+    "card_title": "Thirstbug Sovereign",
+    "ID": "soveradf",
+    "Images": "img/cards/thirstbug_sovereign.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 5,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "If Gaios is your planet, this card can't be killed by battle up to twice per turn. After a player loses a point, you can either:\n- Gain 3 points.\n- Kill 1 zoned card.",
+    "banlist": "",
+    "Power": 10,
+    "Health": 10
+  },
+  {
+    "card_title": "Thirstbug Wriggler",
+    "ID": "wriggle wriggle wriggle",
+    "Images": "img/cards/thirstbug_wriggler.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Can't be killed by battle during your turn. After this card attacks, gain 2 points, also your opponent loses 1 point. When this card is killed, you can pay 1 point to add 1 galaxied 'Thirstbug' card to your hand.",
+    "banlist": "",
+    "Power": 10,
+    "Health": 10
+  },
+  {
+    "card_title": "Thnimbus",
+    "ID": "thingmasdf",
+    "Images": "img/cards/thnimbus.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Sindian",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When your opponent moves a creature into a battle zone, you can change 1 of your zoned creatures' health to 10 to gain 3 stars, then free play this handed creature.",
+    "banlist": "",
+    "Power": 170,
+    "Health": 20
+  },
+  {
+    "card_title": "Tiny Vortex",
+    "ID": "tvor",
+    "Images": "img/cards/tiny_vortex.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Pay 3 stars to add 3 Galaxied/Killed creatures whose total stars are 4 or less.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Toxida",
+    "ID": "toxida",
+    "Images": "img/cards/toxida.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "Teklar",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this creature is killed by an attack, you can put 2 of your killed Teklar creatures with 5 or less stars on top of your galaxy in any order, except this card.",
+    "banlist": "",
+    "Power": 60,
+    "Health": 120
+  },
+  {
+    "card_title": "Trash to Treasure",
+    "ID": "ttt",
+    "Images": "img/cards/trash_to_treasure.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Kill the top 3 cards of your galaxy, then apply of the following abilities,",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Yuglefh",
+    "ID": "yuglefh",
+    "Images": "img/cards/yuglefh.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 2,
+    "card_type": "Creature",
+    "Planet": "No Planet",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When you cost play this creature, you can attach 1 of your killed 5 star or lower creatures to 1 of your other zoned creatures. While attached, it gains the attached creature's ability.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "White Flag",
+    "ID": "white_flag",
+    "Images": "img/cards/white_flag.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Activator",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When your opponent would gain points... Both players gain 2 points instead.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Wind-Up Toy",
+    "ID": "wut",
+    "Images": "img/cards/wind-up_toy.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": "",
+    "card_type": "Resource",
+    "Planet": "",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "Look at the top 5 cards of your galaxy, reveal any number of Teklar creature/combiner cards amongst them, then shuffle them into your galaxy and and place that many galaxied creature/combiner cards on top of your galaxy in any order.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
+  },
+  {
+    "card_title": "Drop Bear",
+    "ID": "db",
+    "Images": "img/cards/drop_bear.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 3,
+    "card_type": "Creature",
+    "Planet": "Gaios",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When this card is played, you can kill 1 zoned attachment/resource card.",
+    "banlist": "",
+    "Power": "",
+    "Health": ""
   }
 ]
