@@ -13772,5 +13772,24 @@
     "banlist": "",
     "Power": "",
     "Health": ""
+  },
+  {
+    "card_title": "Rock Muncher",
+    "ID": "rockmuncher",
+    "Images": "img/cards/rockmuncher.png",
+    "fancard": "TRUE",
+    "Sets": [
+      "Fan Set"
+    ],
+    "Stars": 1,
+    "card_type": "Creature",
+    "Planet": "Baro",
+    "Rarities": {
+      "Fan Set": "Common"
+    },
+    "Card Ability": "When you play this creature while you control another zoned Baro creature, gain stars equal to one of your zoned Baro creatures.",
+    "banlist": "",
+    "Power": 80,
+    "Health": 10
   }
 ]
