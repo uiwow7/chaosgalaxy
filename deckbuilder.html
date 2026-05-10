@@ -1,0 +1,507 @@
+<html>
+<head>
+	<title>Deckbuilder</title>
+	<link rel="icon" type="image/x-icon" href="./img/icon.png">
+	<!-- <link rel="stylesheet" href="./resources/mana.css">
+	<link rel="stylesheet" href="./resources/header.css">
+	<link rel="stylesheet" href="./resources/card-text.css"> -->
+</head>
+<style>
+	@font-face {
+		font-family: Beleren;
+		src: url('./resources/beleren.ttf');
+	}
+	body {
+		font-family: 'Helvetica', 'Arial', sans-serif;
+		overscroll-behavior: none;
+		margin: 0px;
+		background-color: #bbbbbb;
+		display: block;
+	}
+	.page-container {
+		width: 2000px;
+		max-width: 98%;
+		height: 96%;
+		padding-top: 10px;
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		margin: auto;
+		gap: 5px;
+	}
+	.deckbuilder-container {
+		display: flex;
+		flex-direction: column;
+		overflow-y: hidden;
+		gap: 5px;
+	}
+	.search-results-container {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		height: 100%;
+	}
+	.search-container {
+		height: 100%;
+		border: 1px solid #d5d9d9;
+		border-top: 4px solid #171717;
+		border-bottom: 4px solid #171717;
+		background-color: #f3f3f3;
+		border-radius: 6px;
+		display: flex;
+		flex-direction: column;
+		overflow-y: hidden;
+	}
+	.deckbuilder-search-grid {
+		width: 80%;
+		max-width: 1200px;
+		min-height: 36px;
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		gap: 8px;
+		padding: 5px 10%;
+		border-bottom: 1px solid #898989;
+		justify-items: center;
+		align-items: center;
+	}
+	input {
+		width: 100%;
+		height: 35px;
+		font-size: 16px;
+		background-color: #fafafa;
+		border: 1px solid #d5d9d9;
+		border-radius: 2px;
+		padding-left: 10px;
+		padding-right: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	input:focus {
+		outline-color: #4f4f4f;
+	}
+	button {
+		background-color: #fafafa;
+		border: 1px solid #d5d9d9;
+		border-radius: 8px;
+		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		color: #171717;
+		cursor: pointer;
+		font-size: 13px;
+		width: 100%;
+		height: 35px;
+		min-width: 85px;
+	}
+	button:hover {
+		background-color: #ffffff;
+	}
+	button:focus {
+		border-color: #171717;
+		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		outline: 0;
+	}
+	button:disabled, select:disabled {
+		cursor: auto;
+		background-color: #f7fafa;
+		font-style: italic;
+		box-shadow: none;
+		color: #cccccc;
+	}
+	.deckbuilder-search-grid .select-text {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		gap: 4px;
+		font-size: 14.5px;
+		text-align: center;
+	}
+	select {
+		background-color: #fafafa;
+		border: 1px solid #d5d9d9;
+		border-radius: 8px;
+		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		text-align: center;
+		color: #171717;
+		font-size: 13px;
+		height: 30px;
+	}
+	select:focus {
+		outline-color: #4f4f4f;
+	}
+	.search-image-grid-container {
+		overflow-y: scroll;
+	}
+	.search-image-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		width: 98%;
+		overflow-y: scroll;
+		gap: 3px;
+		justify-items: center;
+		padding: 1%;
+	}
+	@media ( max-width: 750px ) {
+		.image-grid {
+			grid-template-columns: 1fr 1fr;	
+		}
+	}
+	.image-grid {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.card-text {
+		border-top: 3px solid #171717;
+		overflow-y: scroll;
+		scrollbar-width: none;
+		height: 50%;
+		padding: 10px 0;
+	}
+	.card-text div {
+		font-size: 13px;
+	}
+	.card-text .name-cost {
+		font-size: 16px;
+	}
+	.card-text .type {
+		font-size: 14px;
+	}
+	.card-text br {
+		content: "";
+		display: block;
+		margin-bottom: 5px;
+	}
+	.img-container {
+		position: relative;
+		align-self: center;
+		text-align: center;
+	}
+	.img-container img {
+		width: 100%;
+		height: auto;
+		border-radius: 3.733% / 2.677%;
+	}
+	.img-container .btn {
+		background: url('./img/flip.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 15%;
+		height: 11%;
+		cursor: pointer;
+		border: none;
+		position: absolute;
+		top: 6.5%;
+		left: 8.5%;
+		transform: translate(-50%, -85%);
+		border-radius: 0px;
+		box-shadow: none;
+	}
+	.img-container .btn:hover {
+		background: url('./img/flip-hover.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	.img-container .hidden-text {
+		position: absolute;
+		font-family: Beleren;
+		top: 5%;
+		left: 9%;
+		font-size: .97vw;
+		color: rgba(0, 0, 0, 0);
+	}
+	.card-grid-container {
+		border-left: 1px solid #d5d9d9;
+		width: 100%;
+		height: 100%;
+		overflow-y: hidden;
+	}
+	.card-grid-container .img-container {
+		width: 100%;
+		height: 50%;
+		padding: 10px 0;
+	}
+	.img-container a {
+		height: 100%;
+		max-width: 80%;
+		display: grid;
+		justify-self: center;
+	}
+	.img-container a > * {
+		grid-row: 1;
+		grid-column: 1;
+	}
+	.card-grid-container img {
+		width: auto;
+		min-width: 0;
+		max-width: 100%;
+		height: auto;
+		min-height: 0;
+		max-height: 100%;
+		display: block;
+		margin: auto;
+		border-radius: 3.733% / 2.677%;
+	}
+	.card-grid-container .btn {
+		left: 50%;
+		top: 48%;
+		transform: translate(-50%, -50%);
+		opacity: 0.5;
+	}
+	.hidden {
+		display: none;
+	}
+	.no-cards-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		font-style: italic;
+		color: #494949;
+	}
+	.deck-container {
+		height: 100%;
+		border: 1px solid #d5d9d9;
+		border-top: 4px solid #171717;
+		border-bottom: 4px solid #171717;
+		background-color: #f3f3f3;
+		border-radius: 6px;
+		display: flex;
+		flex-direction: column;
+		overflow-y: hidden;
+		position: relative;
+	}
+	.deck-info-grid {
+		width: 95%;
+		max-width: 1200px;
+		min-height: 36px;
+		display: grid;
+		grid-template-columns: 1.5fr .65fr .75fr .5fr .75fr;
+		gap: 3px;
+		padding: 5px 2.5%;
+		border-bottom: 1px solid #898989;
+		justify-items: center;
+		align-items: center;
+	}
+	.deck-info-grid select {
+		width: 100%;
+	}
+	.deck-count {
+		font-weight: bold;
+	}
+	.static-deck-container {
+		height: 100%;
+		overflow-y: hidden;
+	}
+	.deck-cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		overflow-y: scroll;
+		scrollbar-width: none;
+		font-size: 14px;
+		height: 100%;
+	}
+	.deck-container span {
+		font-size: 15px;
+		font-weight: bold;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		padding-left: 22px;
+	}
+	.deck-container .icon {
+		width: 60%;
+	}
+	.deck-section {
+		display: none;
+	}
+	.deck-inner-section {
+		padding-bottom: 10px;
+		line-height: 1.5;
+	}
+	.deck-line {
+		border-top: 1px solid #d5d9d9;
+		display: grid;
+		grid-template-columns: 1fr 1fr 13fr;
+		gap: 5px;
+		align-items: center;
+	}
+	.deck-col {
+		padding: 0 15px;
+		height: 100%;
+	}
+	.card-img-container {
+		height: 2.1vw;
+		max-height: 45px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr 12fr;
+		gap: 2px;
+		font-weight: bold;
+		line-height: 1;
+	}
+	.card-img-container img {
+		width: 100%;
+		border-radius: 3.733% / 2.677%;
+	}
+	.card-fx {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		text-align: center;
+	}
+	.card-img-container .card-fx {
+		height: 2.7vw;
+		max-height: 63px;
+	}
+	.img-container .h-img {
+		transform: rotateY(0deg) rotate(90deg);
+		width: 85%;
+		border-radius: 3.733% / 2.677%;
+	}
+	.rc-menu {
+		display: none;
+		position: absolute;
+		background-color: #f3f3f3;
+		border-top: 1px solid #d5d9d9;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		z-index: 2;
+		font-size: 12px;
+	}
+	.rc-menu ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.rc-menu li {
+		padding: 8px 12px;
+		border: 1px solid #d5d9d9;
+		border-top: none;
+		cursor: pointer;
+	}
+	.rc-menu li:hover {
+		background-color: #ffffff;
+	}
+	.search-grid {
+		justify-content: center;
+	}
+	.sg-icon {
+		cursor: pointer;
+	}
+</style>
+<body>
+	<div id="myContextMenu" class="rc-menu">
+		<ul>
+			<li id="add-to-deck">Add to Deck</li>
+			<li id="add-to-sideboard">Add to Sideboard</li>
+		</ul>
+	</div>
+	<input type="text" id="display" class="hidden" value="cards-and-text"> <!-- here to make img-container-defs snippet work properly -->
+	<div class="page-container">
+		<div class="search-container">
+			<div class="deckbuilder-search-grid">
+				<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+				<div class="select-text">
+					<select name="sort-by" id="sort-by">
+                        <option value="type">Type</option>
+						<option value="name">Name</option>
+						<option value="stars">Stars</option>
+						<option value="planet">Planet</option>
+					</select>:<select name="sort-order" id="sort-order">
+						<option value="ascending">Asc</option>
+						<option value="descending">Desc</option>
+					</select>
+				</div>
+			</div>
+			<div class="search-results-container">
+				<div class="search-image-grid-container">
+					<div class="search-image-grid" id="imagesOnlyGrid">
+					</div>
+				</div>
+				<div class="card-grid-container" id="card-grid-container">
+				</div>
+			</div>
+		</div>
+		<div class="deck-container">
+			<div class="no-cards-text" id="no-cards-text">
+				Click on a card to add it to the deck
+			</div>
+			<div class="deck-info-grid">
+				<input type="text" value="Untitled Deck" id="deck-name" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+				<div id="deck-count" class="deck-count">
+					(0 / 0)
+				</div>
+				<select name="display-select" class="display-select" id="display-select">
+					<option value="text">Text</option>
+					<option value="images">Images</option>
+				</select>
+				<div></div> <!-- empty div for spacing -->
+				<select name="file-menu" class="file-menu" id="file-menu">
+					<option value="default">Actions ...</option>
+					<option value="new">New deck</option>
+					<option value="import">Import from file</option>
+					<option value="import-clipboard">Load from clipboard</option>
+					<option value="clipboard">Copy to clipboard</option>
+					<option value="export-txt">Export file</option>
+				</select>
+				<input type="file" class="hidden" id="import-file" onclick="this.value=null;">
+			</div>
+			<div class="static-deck-container">
+				<div class="deck-cards-container">
+					<div class="deck-col" id="col1">
+                        <div class="deck-section" id="deck-planet">
+							<span id="deck-planet-title">Planets (0)</span>
+							<div class="deck-inner-section" id="deck-planet-cards">
+							</div>
+						</div>
+						<div class="deck-section" id="deck-creature">
+							<span id="deck-creature-title">Creatures (0)</span>
+							<div class="deck-inner-section" id="deck-creature-cards">
+							</div>
+						</div>
+						<div class="deck-section" id="deck-combiner">
+							<span id="deck-combiner-title">Combiners (0)</span>
+							<div class="deck-inner-section" id="deck-combiner-cards">
+							</div>
+						</div>
+					</div>
+					<div class="deck-col" id="col2">
+                        <div class="deck-section" id="deck-resource">
+							<span id="deck-resource-title">Resources (0)</span>
+							<div class="deck-inner-section" id="deck-resource-cards">
+							</div>
+						</div>
+                        <div class="deck-section" id="deck-activator">
+							<span id="deck-activator-title">Activators (0)</span>
+							<div class="deck-inner-section" id="deck-activator-cards">
+							</div>
+						</div>
+						<div class="deck-section" id="deck-attachment">
+							<span id="deck-attachment-title">Attachment (0)</span>
+							<div class="deck-inner-section" id="deck-attachment-cards">
+							</div>
+						</div>
+						<div class="deck-section" id="deck-moon">
+							<span id="deck-moon-title">Moon (0)</span>
+							<div class="deck-inner-section" id="deck-moon-cards">
+							</div>
+						</div>
+						<!-- <div class="deck-section" id="deck-land">
+							<span id="deck-land-title">Lands (0)</span>
+							<div class="deck-inner-section" id="deck-land-cards">
+							</div>
+						</div-->
+						<div class="deck-section" id="deck-sideboard">
+							<span id="deck-sideboard-title">Sideboard (0)</span>
+							<div class="deck-inner-section" id="deck-sideboard-cards">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./scripts/deckbuilder.js"></script>
+</body>
+</html>
